@@ -1,0 +1,110 @@
+$background: rgb(20, 20, 20);
+$ulAndBorder: rgb(41, 41, 41);
+$strong: rgb(150, 150, 150);
+$list: rgb(120, 120, 120);
+
+@mixin centeredFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#movie{
+    // height: 100vh;
+    margin: 50px;
+    background: $background;
+}
+
+#section1 {
+    padding: 15px;
+    @include centeredFlex;
+    justify-content: space-around;
+
+    #image {
+        min-width: 215px;
+        height: 320px; 
+        margin-right: 20px;
+
+        img{
+            width:100%;
+            height: 100%;
+            border: 2px solid $ulAndBorder;
+        }
+    }
+    #about {
+        height: 100%;
+        width: 100%;
+        @include centeredFlex;
+        flex-direction: column;
+
+        h2 {
+            width: 100%;
+            margin:15px 0;
+        }
+        
+        ul {
+            width: 100%;
+            padding:5px;
+            margin: 0;
+            list-style: none;
+            border-radius: 5px;
+            background: $ulAndBorder;
+            line-height:35px;
+            box-sizing: border-box;
+            
+            li {
+                color: $list;
+                font-size: 14px;
+
+                strong {
+                    color: $strong;
+                }
+            }
+        }
+    }
+}
+
+#section2 {
+    height: auto;
+    padding: 10px;
+    margin: 4px 4px 15px 4px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px black;
+    @include centeredFlex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h2 {
+        margin: 5px 0;            
+    }
+    p {
+        margin: 0;
+        font-size: 14px;
+        color: $list;
+    }
+    hr {
+        width: 100%;
+        height:2px;
+        border: none;
+        background: $ulAndBorder;
+    }
+    div{
+        @include centeredFlex;
+        justify-content: flex-start;
+
+        a {
+            text-decoration: none;
+            color:white;
+            padding: 5px;
+            border-radius: 5px;
+            
+            &:first-of-type {
+                background:rgb(13, 116, 201);
+                margin-right: 10px;
+            }
+            &:nth-of-type(2) {
+                background: $ulAndBorder;
+            }
+        }
+    }
+}
