@@ -1,3 +1,6 @@
+// const $ = require( "jquery" );
+// const axios = require('axios').default;
+
 $(() => {
     $('form').on('submit', event => {
         const searchText = $('input').val();
@@ -6,7 +9,7 @@ $(() => {
     });
 
     const getMovies = searchText => {
-        axios.get(`http://www.omdbapi.com/?apikey=1951be3e&s=${searchText}`)
+        axios.get(`https://www.omdbapi.com/?apikey=1951be3e&s=${searchText}`)
             .then(result => {
                 // console.log(result.data.Search)
                 let movies = result.data.Search;
@@ -38,7 +41,7 @@ const movieSelected = (id) => {
 const getMovie = () => {
     const movieID = sessionStorage.getItem("movieID");
 
-    axios.get(`http://www.omdbapi.com/?apikey=1951be3e&i=${movieID}`)
+    axios.get(`https://www.omdbapi.com/?apikey=1951be3e&i=${movieID}`)
             .then(result => {
                 console.log(result.data);
                 const movie = result.data;

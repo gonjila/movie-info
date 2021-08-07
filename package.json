@@ -1,5 +1,5 @@
 {
-  "name": "jquery",
+  "name": "jq",
   "version": "1.0.0",
   "description": "you can search movies and see information about it",
   "main": "index.html",
@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/gonjila/movie-info/issues"
   },
-  "homepage": "https://github.com/gonjila/movie-info#readme"
+  "homepage": "https://github.com/gonjila/movie-info#readme",
+  "dependencies": {}
 }
