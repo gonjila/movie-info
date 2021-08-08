@@ -1,0 +1,45 @@
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+    .frame {
+        max-width: 130px;
+        max-height: 350px;
+        
+        .wrapper {
+
+            img{
+                max-height: 220px;
+            }
+            h4 {
+                font-size: 14px;
+            }
+        }
+    }
+
+    #section1 {
+        flex-direction: column;
+
+        #image {
+            margin: 0;
+        }
+        #about {
+            h1 {
+                font-size: 24px;
+            }
+        }
+    }
+
+    #section2 {
+        h2 {
+            font-size: 24px;
+        }
+
+        div {
+            a {
+                font-size: 12px;
+            }
+        }
+    }
+}

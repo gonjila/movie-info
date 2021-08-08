@@ -9,7 +9,7 @@ $(() => {
     });
 
     const getMovies = searchText => {
-        axios.get(`https://www.omdbapi.com/?apikey=1951be3e&s=${searchText}`)
+        axios.get(`http://www.omdbapi.com/?apikey=1951be3e&s=${searchText}`)
             .then(result => {
                 // console.log(result.data.Search)
                 let movies = result.data.Search;
@@ -26,7 +26,7 @@ $(() => {
                     `
                 })
 
-                $("#movies").html(output)
+                $("#movie-list").html(output)
             })
             .catch(err => console.error(err));
     };
@@ -41,7 +41,7 @@ const movieSelected = (id) => {
 const getMovie = () => {
     const movieID = sessionStorage.getItem("movieID");
 
-    axios.get(`https://www.omdbapi.com/?apikey=1951be3e&i=${movieID}`)
+    axios.get(`http://www.omdbapi.com/?apikey=1951be3e&i=${movieID}`)
             .then(result => {
                 console.log(result.data);
                 const movie = result.data;
@@ -49,10 +49,10 @@ const getMovie = () => {
                 const output = `
                     <div id="section1">
                         <div id="image">
-                            <img src="${movie.Poster}">
+                            <img alt="${movie.Title}" src="${movie.Poster}">
                         </div>
                         <div id="about">
-                            <h2>${movie.Title}</h2>
+                            <h1>${movie.Title}</h1>
                             <ul>
                                 <li><strong>Genre:</strong> ${movie.Genre}</li>
                                 <li><strong>Released:</strong> ${movie.Released}</li>

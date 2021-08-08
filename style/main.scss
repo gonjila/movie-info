@@ -1,4 +1,5 @@
 @import '_movie';
+@import '_media';
 
 $gray: rgba(255, 255, 255, 0.1);
 
@@ -26,7 +27,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    h3 {
+    h1 {
         color: white;
         font-size: 20px;
         letter-spacing: 1px;
@@ -44,7 +45,7 @@ body {
     }
 }
 
-#movies {
+#movie-list {
     padding: 10px;
     display: flex;
     justify-content: space-evenly;
@@ -70,6 +71,7 @@ body {
             height: 250px;
         }
         h4{
+            text-align: center;
             margin: 10px 0;
         }
         a{
@@ -78,7 +80,7 @@ body {
             font-size: 12px;
             text-decoration: none;
             text-align: center;
-            padding:10px;
+            padding: 10px;
             border-radius: 10px;
             background: rgb(13, 116, 201);
             box-sizing: border-box;
